@@ -7,14 +7,12 @@
     <title>Copy Query Param</title>
   </head>
   <body>
-      <h1> This page will copy your query parametet </h1>
-      <button id="start">Start</button>
       <script>
       (function () {
         var urlParams = new URLSearchParams(window.location.search);
         var copyText = urlParams.get('t');
         navigator.clipboard.writeText(copyText);
-        alert("Copied:", copyText);
+        window.close();
       })();
       </script>
   </body>
