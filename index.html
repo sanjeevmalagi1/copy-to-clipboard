@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html>
-<body>
-<script>
-(function () {
-  var urlParams = new URLSearchParams(window.location.search);
-  var copyText = urlParams.get('t');
-  navigator.clipboard.writeText(copyText);
-  alert("Copied:", copyText);
-})();
-</script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Copy Query Param</title>
+  </head>
+  <body>
+      <h1> This page will copy your query parametet </h1>
+      <button id="start">Start</button>
+      <script>
+      (function () {
+        var urlParams = new URLSearchParams(window.location.search);
+        var copyText = urlParams.get('t');
+        navigator.clipboard.writeText(copyText);
+        alert("Copied:", copyText);
+      })();
+      </script>
+  </body>
+
 </html>
