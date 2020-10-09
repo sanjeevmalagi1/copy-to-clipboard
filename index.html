@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+(function () {
+  var urlParams = new URLSearchParams(window.location.search);
+  var copyText = urlParams.get('t');
+  navigator.clipboard.writeText(copyText);
+  alert("Copied:", copyText);
+})();
+</script>
+</body>
+</html>
